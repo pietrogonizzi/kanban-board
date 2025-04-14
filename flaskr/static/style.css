@@ -648,6 +648,9 @@ body {
 .board-column.done .board-column-header {
   background: #2ac06d;
 }
+.board-column.linea .board-column-header {
+  background: #4a9cf9;
+}
 .board-column-header .add-task {
   position: absolute;
   display: flex;

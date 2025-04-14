@@ -2,6 +2,7 @@ DROP TABLE IF EXISTS user;
 DROP TABLE IF EXISTS board;
 DROP TABLE IF EXISTS user_board;
 DROP TABLE IF EXISTS task;
+DROP TABLE IF EXISTS lavorazioni;
 
 CREATE TABLE user (
   id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
@@ -32,4 +33,23 @@ CREATE TABLE task (
   assignees TEXT NOT NULL,
   board_id INTEGER,
   FOREIGN KEY (board_id) REFERENCES board (id)
+);
+
+CREATE TABLE lavorazioni (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  linea TEXT,
+  ordine INTEGER,
+  consegna DATE,
+  partenza DATE,
+  ragione_sociale TEXT,
+  destinazione TEXT,
+  codice_articolo TEXT,
+  descrizione TEXT,
+  plu INTEGER,
+  vettore TEXT,
+  lotto TEXT,
+  csqa BOOLEAN,
+  cartoni INTEGER,
+  inizio_produzione DATE,
+  progressivo INTEGER
 );

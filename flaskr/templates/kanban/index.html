@@ -113,7 +113,7 @@
     <div class="board">
       {% set groups = ["to do", "doing", "done"] %}
       {% for group in groups %}
-        <div class="board-column {{ group.replace(' ', '') }}">
+        <div class="board-column linea">
           <div class="board-column-header">
             <span class="title">{{ group }}</span>
             <span class="add-task" onclick="add_task(this)"><i class="fa fa-plus-circle"></i></span>
